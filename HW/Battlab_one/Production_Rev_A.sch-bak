@@ -14,9 +14,15 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Wire Wire Line
+	1100 5000 3400 5000
+Wire Wire Line
+	3400 5000 3400 3700
+Wire Wire Line
 	3400 3700 5000 3700
 Wire Wire Line
 	5000 3700 5000 3900
+Wire Wire Line
+	3400 5000 3400 6900
 Wire Wire Line
 	3400 6900 3400 8100
 Wire Wire Line
@@ -45,6 +51,7 @@ Wire Wire Line
 	6500 6900 6500 6400
 Wire Wire Line
 	6500 6400 7200 6400
+Connection ~ 3400 5000
 Connection ~ 3800 8900
 Connection ~ 3800 8100
 Connection ~ 5800 8100
@@ -127,6 +134,16 @@ GND
 Wire Wire Line
 	7400 1200 7600 1200
 Text Label 7400 1200 0    10   ~ 0
+GND
+Wire Wire Line
+	1100 4900 2300 4900
+Wire Wire Line
+	2300 4900 2300 4500
+Wire Wire Line
+	2300 4500 2800 4500
+Wire Wire Line
+	2800 4500 2800 4600
+Text Label 1100 4900 0    10   ~ 0
 GND
 Wire Wire Line
 	7500 4100 7500 4000
@@ -529,6 +546,7 @@ Wire Wire Line
 	3000 5100 3000 6100
 Wire Wire Line
 	3000 6100 2700 6100
+Connection ~ 3000 5100
 Wire Wire Line
 	2700 5900 2800 5900
 Wire Wire Line
@@ -539,6 +557,7 @@ Wire Wire Line
 	3800 4700 4000 4700
 Wire Wire Line
 	2800 5900 2800 5200
+Connection ~ 2800 5200
 Wire Wire Line
 	7200 2400 7100 2400
 Wire Wire Line
@@ -754,6 +773,17 @@ F 1 "FT232RL" H 4900 5100 50  0001 C CNN
 F 2 "Production_Rev_A:SSOP28DB" H 4900 5100 50  0001 C CNN
 F 3 "" H 4900 5100 50  0001 C CNN
 	1    4900 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Production_Rev_A-eagle-import:GND #GND06
+U 1 1 A07C0193
+P 2800 4700
+F 0 "#GND06" H 2800 4700 50  0001 C CNN
+F 1 "GND" H 2700 4600 59  0000 L BNN
+F 2 "" H 2800 4700 50  0001 C CNN
+F 3 "" H 2800 4700 50  0001 C CNN
+	1    2800 4700
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1278,11 +1308,22 @@ L Production_Rev_A-eagle-import:TPD2E2U06DRLR USBPROT1
 U 1 1 089EBCFE
 P 2000 6300
 F 0 "USBPROT1" H 1494 6600 69  0000 L BNN
-F 1 "TPD2E2U06DRLR" H 1550 5700 69  0000 L BNN
+F 1 "TPD2E2U06DRLR" H 1526 5641 69  0000 L BNN
 F 2 "Production_Rev_A:SOT50P160X60-5N" H 2000 6300 50  0001 C CNN
 F 3 "" H 2000 6300 50  0001 C CNN
 	1    2000 6300
 	-1   0    0    1   
+$EndComp
+$Comp
+L Production_Rev_A-eagle-import:GND #GND09
+U 1 1 928DF91D
+P 1100 6200
+F 0 "#GND09" H 1100 6200 50  0001 C CNN
+F 1 "GND" H 1000 6100 59  0000 L BNN
+F 2 "" H 1100 6200 50  0001 C CNN
+F 3 "" H 1100 6200 50  0001 C CNN
+	1    1100 6200
+	1    0    0    -1  
 $EndComp
 $Comp
 L Production_Rev_A-eagle-import:RESISTOR1206 R8
@@ -1327,6 +1368,17 @@ F 2 "Production_Rev_A:1206" H 11600 3600 50  0001 C CNN
 F 3 "" H 11600 3600 50  0001 C CNN
 	1    11600 3600
 	1    0    0    -1  
+$EndComp
+$Comp
+L Production_Rev_A-eagle-import:USBPTH J2
+U 1 1 45449025
+P 1000 4900
+F 0 "J2" H 1000 5275 59  0000 L BNN
+F 1 "USB-B" H 1000 4750 59  0000 L BNN
+F 2 "Production_Rev_A:USB-B-PTH" H 1000 4900 50  0001 C CNN
+F 3 "" H 1000 4900 50  0001 C CNN
+	1    1000 4900
+	-1   0    0    1   
 $EndComp
 $Comp
 L Production_Rev_A-eagle-import:CAP1206 C7
@@ -1629,70 +1681,11 @@ Wire Wire Line
 Wire Wire Line
 	6300 6300 7200 6300
 Wire Wire Line
+	1100 5200 2800 5200
+Wire Wire Line
 	3800 2200 3800 3400
 Wire Wire Line
 	13500 1600 14100 1600
 Wire Wire Line
-	3400 5000 3400 6900
-Wire Wire Line
-	3400 5000 3400 3700
-Connection ~ 3400 5000
-Connection ~ 3000 5100
-Connection ~ 2800 5200
-Wire Wire Line
-	2650 5100 3000 5100
-Wire Wire Line
-	3400 5000 2650 5000
-Wire Wire Line
-	2650 5200 2800 5200
-Text Label 2650 5000 2    50   ~ 0
-VBUS
-Text Label 2650 5200 2    50   ~ 0
-D+
-Text Label 2650 5100 2    50   ~ 0
-D-
-NoConn ~ 1150 5300
-NoConn ~ 2050 4100
-NoConn ~ 2050 4000
-Wire Wire Line
-	1450 5300 1450 5400
-$Comp
-L Connector:USB_C_Plug_USB2.0 P1
-U 1 1 5F58B2D2
-P 1450 4400
-F 0 "P1" H 1557 5267 50  0000 C CNN
-F 1 "USB_C_Plug" H 1557 5176 50  0000 C CNN
-F 2 "Production_Rev_A:C393939" H 1600 4400 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1600 4400 50  0001 C CNN
-	1    1450 4400
-	1    0    0    -1  
-$EndComp
-Text Label 2050 3800 0    50   ~ 0
-VBUS
-Text Label 2050 4300 0    50   ~ 0
-D-
-Text Label 2050 4500 0    50   ~ 0
-D+
-$Comp
-L Production_Rev_A-eagle-import:GND #GND09
-U 1 1 928DF91D
-P 1450 5500
-F 0 "#GND09" H 1450 5500 50  0001 C CNN
-F 1 "GND" H 1350 5400 59  0000 L BNN
-F 2 "" H 1450 5500 50  0001 C CNN
-F 3 "" H 1450 5500 50  0001 C CNN
-	1    1450 5500
-	1    0    0    -1  
-$EndComp
-$Comp
-L Production_Rev_A-eagle-import:GND #GND?
-U 1 1 5FC299E3
-P 1100 6200
-F 0 "#GND?" H 1100 6200 50  0001 C CNN
-F 1 "GND" H 1000 6100 59  0000 L BNN
-F 2 "" H 1100 6200 50  0001 C CNN
-F 3 "" H 1100 6200 50  0001 C CNN
-	1    1100 6200
-	1    0    0    -1  
-$EndComp
+	1100 5100 3000 5100
 $EndSCHEMATC
