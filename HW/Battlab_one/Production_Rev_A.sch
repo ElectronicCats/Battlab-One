@@ -1651,48 +1651,90 @@ Text Label 2650 5200 2    50   ~ 0
 D+
 Text Label 2650 5100 2    50   ~ 0
 D-
-NoConn ~ 1150 5300
-NoConn ~ 2050 4100
-NoConn ~ 2050 4000
+NoConn ~ 375  3365
 Wire Wire Line
-	1450 5300 1450 5400
+	675  3365 675  3465
 $Comp
 L Connector:USB_C_Plug_USB2.0 P1
 U 1 1 5F58B2D2
-P 1450 4400
-F 0 "P1" H 1557 5267 50  0000 C CNN
-F 1 "USB_C_Plug" H 1557 5176 50  0000 C CNN
-F 2 "Production_Rev_A:C393939" H 1600 4400 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1600 4400 50  0001 C CNN
-	1    1450 4400
+P 675 2465
+F 0 "P1" H 782 3332 50  0000 C CNN
+F 1 "USB_C_Plug" H 782 3241 50  0000 C CNN
+F 2 "Production_Rev_A:C393939" H 825 2465 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 825 2465 50  0001 C CNN
+	1    675  2465
 	1    0    0    -1  
 $EndComp
-Text Label 2050 3800 0    50   ~ 0
+Text Label 1275 1865 0    50   ~ 0
 VBUS
-Text Label 2050 4300 0    50   ~ 0
+Text Label 1275 2365 0    50   ~ 0
 D-
-Text Label 2050 4500 0    50   ~ 0
+Text Label 1275 2565 0    50   ~ 0
 D+
 $Comp
 L Production_Rev_A-eagle-import:GND #GND09
 U 1 1 928DF91D
-P 1450 5500
-F 0 "#GND09" H 1450 5500 50  0001 C CNN
-F 1 "GND" H 1350 5400 59  0000 L BNN
-F 2 "" H 1450 5500 50  0001 C CNN
-F 3 "" H 1450 5500 50  0001 C CNN
-	1    1450 5500
+P 675 3565
+F 0 "#GND09" H 675 3565 50  0001 C CNN
+F 1 "GND" H 575 3465 59  0000 L BNN
+F 2 "" H 675 3565 50  0001 C CNN
+F 3 "" H 675 3565 50  0001 C CNN
+	1    675  3565
 	1    0    0    -1  
 $EndComp
 $Comp
-L Production_Rev_A-eagle-import:GND #GND?
+L Production_Rev_A-eagle-import:GND #GND06
 U 1 1 5FC299E3
 P 1100 6200
-F 0 "#GND?" H 1100 6200 50  0001 C CNN
+F 0 "#GND06" H 1100 6200 50  0001 C CNN
 F 1 "GND" H 1000 6100 59  0000 L BNN
 F 2 "" H 1100 6200 50  0001 C CNN
 F 3 "" H 1100 6200 50  0001 C CNN
 	1    1100 6200
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R_Small R10
+U 1 1 5F5C899C
+P 1415 2065
+F 0 "R10" V 1420 2065 50  0000 C CNN
+F 1 "5.1K" V 1345 2080 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 1415 2065 50  0001 C CNN
+F 3 "~" H 1415 2065 50  0001 C CNN
+	1    1415 2065
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1315 2065 1275 2065
+Wire Wire Line
+	1275 2165 1305 2165
+$Comp
+L Device:R_Small R9
+U 1 1 5F609895
+P 1405 2165
+F 0 "R9" V 1400 2160 50  0000 C CNN
+F 1 "5.1K" V 1330 2175 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 1405 2165 50  0001 C CNN
+F 3 "~" H 1405 2165 50  0001 C CNN
+	1    1405 2165
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5F60B49F
+P 1650 2165
+F 0 "#PWR01" H 1650 1915 50  0001 C CNN
+F 1 "GND" H 1655 1992 50  0000 C CNN
+F 2 "" H 1650 2165 50  0001 C CNN
+F 3 "" H 1650 2165 50  0001 C CNN
+	1    1650 2165
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1515 2065 1650 2065
+Wire Wire Line
+	1650 2065 1650 2165
+Wire Wire Line
+	1505 2165 1650 2165
+Connection ~ 1650 2165
 $EndSCHEMATC

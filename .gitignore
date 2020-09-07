@@ -1,0 +1,8 @@
+
+.DS_Store
+
+*.kicad_pcb
+
+HW/Battlab_one/Production_Rev_A.kicad_pcb-bak
+
+*.sch-bak
