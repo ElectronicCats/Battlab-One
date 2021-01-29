@@ -27,9 +27,9 @@ The BattLab-One estimates the battery life of your IOT project using the DUT cut
 
   - BattLab_One_Production_Rev_A.py - Python Application Code for Production version 1.01
 
-  - Production_Rev_A.sch - Schematic in Eagle
+  - Production_Rev_A.sch - Schematic in Kicad
 
-  - Production_Rev_A..brd - PCB Layout in Eagle
+  - Production_Rev_A..brd - PCB Layout in Kicad 
 
   - MSP430Firmware.c - Firmware code for the MSP430 for Production Version 1.01
 
