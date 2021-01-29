@@ -51,6 +51,9 @@ This project uses pipenv to take care of setting up a virtual environment as wel
 5. Start the application: `python BattLab_One_V1.0.6.py`
 
 ## License 
+
+![OpenSourceLicense](https://github.com/ElectronicCats/AjoloteBoard/raw/master/OpenSourceLicense.png)
+
 Electronic Cats invests time and resources providing this open source design, please support Electronic Cats and open-source hardware by purchasing products from Electronic Cats!
 
 Designed by Bluebird Labs LLC
